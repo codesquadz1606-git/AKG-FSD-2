@@ -45,3 +45,15 @@ Giving an output according to condition.Ternary Operator
 What is Wrapper Element?
 It is based on && operator.
 condition/variable && code/text
+
+Class 2 : Props , UseEffect , Form Handling
+What is props?
+Props is a technique where we transfer data from parent to child element.
+
+What is UseEffect?
+It is our react hook which helps us to handle the side effects of the UI.
+Api Response , Updates ,.....
+
+Form Handling are of two types:
+    i. Manual : Here , we have to write the logic to handle the form data. : Controlled Statement
+    ii. Package : Here we install a package to handle the form data : Uncontrolled Statement
