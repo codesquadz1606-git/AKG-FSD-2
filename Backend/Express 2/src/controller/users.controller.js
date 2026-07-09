@@ -1,5 +1,6 @@
 const bcrypt=require("bcryptjs")
 const userModel = require("../model/user.model")
+const jwt=require("jsonwebtoken")
 
 function allUser(){
 
@@ -36,8 +37,15 @@ async function login(req,res){
         })
     }
 
+    const token=jwt.sign(
+        {id:user._id,role:user.role},
+        process.env.JWT_SECRET_KEY,
+        {expiresIn:"1h"}
+    )
+
     res.json({
-        message:"Logged IN Successfully"
+        message:"Logged IN Successfully",
+        token
     })
 }
 
