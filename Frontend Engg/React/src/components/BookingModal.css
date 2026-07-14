@@ -1,0 +1,211 @@
+/* ===========================================
+   BookingModal styles
+   Merge these into your project's global CSS
+   (or import this file directly in main.jsx)
+   =========================================== */
+
+.booking-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 15, 20, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 200;
+  animation: bookingFadeIn 0.2s ease;
+}
+
+@keyframes bookingFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.booking-modal {
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  font-family: "Inter", sans-serif;
+}
+
+.booking-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #f2f2f5;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.booking-modal__hotel {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.booking-modal__hotel img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.booking-modal__hotel h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.booking-modal__hotel p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.booking-modal__rate {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff5a5f;
+}
+
+.booking-modal__rate small {
+  font-weight: 400;
+  color: #6b7280;
+}
+
+/* ---------- Form ---------- */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.booking-form__row {
+  display: flex;
+  gap: 12px;
+}
+
+.booking-form__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booking-form__field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.booking-form__field input,
+.booking-form__field select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  background: #fff;
+}
+
+.booking-form__error {
+  color: #d0342c;
+  font-size: 13px;
+  margin: -6px 0 0;
+}
+
+.booking-form__submit {
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.booking-form__submit:hover {
+  background: #e94b50;
+}
+
+/* ---------- Summary ---------- */
+.booking-summary {
+  background: #f7f7fb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booking-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.booking-summary__row--total {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* ---------- Success screen ---------- */
+.booking-success {
+  text-align: center;
+  padding: 10px 0 4px;
+}
+
+.booking-success__icon {
+  font-size: 44px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.booking-success__details {
+  background: #f7f7fb;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 16px 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.booking-success__details p {
+  margin: 4px 0;
+}
+
+.booking-success__done {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .booking-form__row {
+    flex-direction: column;
+  }
+}
